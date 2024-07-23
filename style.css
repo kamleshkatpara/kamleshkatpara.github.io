@@ -171,7 +171,6 @@ svg#download-pdf {
 .sidebar {
   background-color: #ebf5ff;
   padding: 1rem;
-  margin-top: 2rem;
 }
 
 .sidebar__contact-info p {
@@ -213,7 +212,7 @@ li::before {
 
 .main-content {
   padding: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
   background-color: #f4f4f4;
 }
 
