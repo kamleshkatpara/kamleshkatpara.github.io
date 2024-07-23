@@ -171,6 +171,7 @@ svg#download-pdf {
 .sidebar {
   background-color: #ebf5ff;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .sidebar__contact-info p {
@@ -212,7 +213,7 @@ li::before {
 
 .main-content {
   padding: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
   background-color: #f4f4f4;
 }
 
@@ -326,6 +327,7 @@ a.project__link {
 p.project__technologies {
   padding: 0.5rem;
 }
+
 @media print {
   @page {
     size: A3;
@@ -350,4 +352,84 @@ p.project__technologies {
     background: none !important;
     background-color: transparent !important;
   }
+}
+
+/* Extra Small Devices (X-Small) - <576px */
+@media (max-width: 575.98px) {
+  .page {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+  }
+
+  .sidebar__contact-info p {
+    padding: 0;
+  }
+  .main-content__section-title {
+    width: 75vw;
+  }
+
+  .job__date {
+    font-size: 0.89rem;
+  }
+
+  #text {
+    display: none;
+  }
+}
+
+/* Small Devices - ≥576px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .page {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+  }
+
+  .sidebar__contact-info p {
+    padding: 0.2rem;
+  }
+  .main-content__section-title {
+    width: 37vw;
+  }
+}
+
+/* Medium Devices - ≥768px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .page {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+  }
+
+  .sidebar__contact-info p {
+    padding: 0.2rem;
+  }
+
+  .main-content__section-title {
+    width: 37vw;
+  }
+}
+
+/* Large Devices - ≥992px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .page {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+  }
+
+  .sidebar__contact-info p {
+    padding: 0.2rem;
+  }
+}
+
+/* Extra Large Devices - ≥1200px */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* Your CSS here */
+}
+
+/* Extra Extra Large Devices - ≥1400px */
+@media (min-width: 1400px) {
+  /* Your CSS here */
 }
