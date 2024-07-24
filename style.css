@@ -136,36 +136,13 @@ textarea:not([rows]) {
 
 /* Base Styles */
 
-header {
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.5rem;
-  z-index: 1000;
-}
-
-figure {
-  width: 3vw;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-svg#download-pdf {
-  cursor: pointer;
-}
-
 .page {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   width: 70vw;
   max-width: 1200px;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 
 .sidebar {
@@ -212,18 +189,19 @@ li::before {
 
 .main-content {
   padding: 0;
-  margin-top: 1rem;
-  background-color: #f4f4f4;
+  margin: 0;
+  background-color: #ffffff;
 }
 
 .main-content__title {
   font-size: 2.5rem;
+  margin: 1rem;
 }
 
 .main-content__summary {
   font-size: 1.15rem;
   margin: 1rem 1rem 1rem auto;
-  padding: 1rem 1rem 1rem 0;
+  padding: 0;
 }
 
 .main-content__experience,
@@ -247,7 +225,7 @@ li::before {
   position: absolute;
   top: 0;
   right: 0;
-  border-top: 3rem solid #f4f4f4;
+  border-top: 3rem solid #ffffff;
   border-left: 3rem solid #ebf5ff;
   width: 0;
   z-index: 1;
@@ -341,10 +319,6 @@ p.project__technologies {
     width: 100%;
     height: auto;
     box-sizing: border-box;
-  }
-
-  header {
-    display: none;
   }
 
   body {
