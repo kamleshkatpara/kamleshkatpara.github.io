@@ -15,123 +15,14 @@
   /* background: rgb(0 100 0 / 0.1); */
 }
 
-/* Prevent Font Inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favor of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-
-/* Remove list style on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   line-height: 1.5;
   font-family: "Calibri", sans-serif;
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* Make the elements full screen while keeping the scrolling smooth */
-body,
-html {
-  height: auto;
-  scroll-behavior: smooth;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture,
-svg,
-video,
-canvas {
-  max-width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-style: italic;
-  vertical-align: middle;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Make sure textarea without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been authored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-/* Turn off animations for people who don't want to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-    transition: none;
-  }
 }
 
 /* Base Styles */
@@ -207,6 +98,7 @@ li::before {
 .main-content__experience,
 .main-content__projects {
   margin-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .main-content__section-title {
@@ -310,14 +202,11 @@ p.project__technologies {
     size: A3;
     margin: 0;
     padding: 0;
-    height: auto;
     box-sizing: border-box;
   }
 
   .page {
-    margin: 0;
-    width: 100%;
-    height: auto;
+    height: 100vh;
     box-sizing: border-box;
   }
 
