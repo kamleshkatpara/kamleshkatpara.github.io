@@ -336,8 +336,15 @@ p.project__technologies {
   }
 
   .sidebar__contact-info p {
-    padding: 0;
+    padding: 0.3rem;
   }
+
+  .phone-icon,
+  .email-icon,
+  .pin-icon {
+    display: none;
+  }
+
   .main-content__section-title {
     width: 75vw;
   }
@@ -360,8 +367,15 @@ p.project__technologies {
   }
 
   .sidebar__contact-info p {
-    padding: 0.2rem;
+    padding: 0.3rem;
   }
+
+  .phone-icon,
+  .email-icon,
+  .pin-icon {
+    display: none;
+  }
+
   .main-content__section-title {
     width: 37vw;
   }
@@ -376,7 +390,7 @@ p.project__technologies {
   }
 
   .sidebar__contact-info p {
-    padding: 0.2rem;
+    padding: 0.3rem;
   }
 
   .main-content__section-title {
