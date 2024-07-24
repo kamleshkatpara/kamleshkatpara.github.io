@@ -15,6 +15,33 @@
   /* background: rgb(0 100 0 / 0.1); */
 }
 
+/* Prevent Font Inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favor of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list style on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
 /* Set core body defaults */
 body {
   line-height: 1.5;
@@ -23,6 +50,48 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Make the elements full screen while keeping the scrolling smooth */
+body,
+html {
+  height: auto;
+  scroll-behavior: smooth;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Anything that has been authored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Turn off animations for people who don't want to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
 }
 
 /* Base Styles */
@@ -117,8 +186,8 @@ li::before {
   position: absolute;
   top: 0;
   right: 0;
-  border-top: 3rem solid #ffffff;
-  border-left: 3rem solid #ebf5ff;
+  border-top: 3.5rem solid #ffffff;
+  border-left: 3.5rem solid #ebf5ff;
   width: 0;
   z-index: 1;
 }
@@ -127,9 +196,9 @@ li::before {
   content: "";
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 22px;
   width: 1rem;
-  height: 3.3rem;
+  height: 3.8rem;
   background-color: #a1c1e6;
   transform: skew(41deg);
   z-index: 2;
@@ -235,15 +304,15 @@ p.project__technologies {
   }
 
   .main-content__section-title {
-    width: 75vw;
+    width: 70vw;
   }
 
   .job__date {
     font-size: 0.89rem;
   }
 
-  #text {
-    display: none;
+  body {
+    overflow-x: hidden;
   }
 }
 
@@ -265,8 +334,12 @@ p.project__technologies {
     display: none;
   }
 
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+  }
+
   .main-content__section-title {
-    width: 37vw;
+    width: auto;
   }
 }
 
@@ -283,7 +356,7 @@ p.project__technologies {
   }
 
   .main-content__section-title {
-    width: 37vw;
+    width: 42vw;
   }
 }
 
@@ -298,14 +371,28 @@ p.project__technologies {
   .sidebar__contact-info p {
     padding: 0.2rem;
   }
+  .main-content__section-title {
+    width: 37vw;
+  }
 }
 
 /* Extra Large Devices - ≥1200px */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  /* Your CSS here */
+  .main-content__section-title {
+    width: 15vw;
+  }
 }
 
 /* Extra Extra Large Devices - ≥1400px */
 @media (min-width: 1400px) {
-  /* Your CSS here */
+  .main-content__section-title {
+    width: 25vw;
+  }
+}
+
+/* Extra Extra Extra Large Devices - ≥1400px */
+@media (min-width: 2560px) {
+  .main-content__section-title {
+    width: 15vw;
+  }
 }
